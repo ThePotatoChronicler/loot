@@ -88,9 +88,12 @@ void apiLogCallback(LogLevel level, const char* message) {
 
 LootState::LootState() :
     unappliedChangeCounter_(0),
+    autoSort_(false),
     currentGame_(installedGames_.end()) {}
 
-void LootState::init(const std::string& cmdLineGame) {
+void LootState::init(const std::string& cmdLineGame, bool autoSort) {
+  autoSort_ = autoSort;
+
   // Do some preliminary locale / UTF-8 support setup here, in case the settings
   // file reading requires it.
   // Boost.Locale initialisation: Specify location of language dictionaries.
@@ -255,6 +258,10 @@ std::vector<std::string> LootState::getInstalledGames() const {
     installedGames.push_back(game.FolderName());
   }
   return installedGames;
+}
+
+bool LootState::shouldAutoSort() const {
+  return autoSort_;
 }
 
 bool LootState::hasUnappliedChanges() const {
