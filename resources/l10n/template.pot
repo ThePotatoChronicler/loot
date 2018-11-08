@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LOOT 0.13.3\n"
 "Report-Msgid-Bugs-To: https://github.com/loot/loot/issues\n"
-"POT-Creation-Date: 2018-11-08 20:08+0000\n"
+"POT-Creation-Date: 2018-11-19 17:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,6 +201,12 @@ msgstr ""
 #: src/gui/html/js/initialise.js:378
 #, javascript-format
 msgid "A [new release](%s) of LOOT is available."
+msgstr ""
+
+#: src/gui/html/js/initialise.js:422
+msgid ""
+"Auto-sort has been cancelled as there is at least one error message "
+"displayed."
 msgstr ""
 
 #: src/gui/html/js/translateStaticText.js:8
